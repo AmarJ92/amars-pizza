@@ -8,9 +8,7 @@ const Navbar = () => {
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-         <a href="">Willkommen</a>
          <Link
-          href=""
           activeClass="active"
           to="pizzakarte"
           spy={true}
@@ -18,7 +16,6 @@ const Navbar = () => {
           duration={500}
         >Pizzakarte</Link>
         <Link
-          href=""
           activeClass="active"
           to="buchung"
           spy={true}
@@ -26,7 +23,6 @@ const Navbar = () => {
           duration={500}
         >Buchung</Link>
         <Link
-          href=""
           activeClass="active"
           to="preise"
           spy={true}
@@ -34,7 +30,6 @@ const Navbar = () => {
           duration={500}
         >Preise</Link>
         <Link
-          href=""
           activeClass="active"
           to="sonstiges"
           spy={true}
