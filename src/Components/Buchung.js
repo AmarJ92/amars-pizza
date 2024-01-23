@@ -20,7 +20,8 @@ const Buchung = () => {
             image: Zwei,
             title: "Kontaktiere mich via...",
             text: <ul>
-            <p>Email, Instagram, Handy und wir besprehen alle Details (wie Pizzasorten, Datum oder auch Veranstaltungsort)</p>
+            <a href="https://www.instagram.com/amars_pizza/">Instagram,</a>
+            <p>Email oder Handy und wir besprechen alle Details (wie Pizzasorten, Datum oder auch Veranstaltungsort)</p>
           </ul>,
         },
         {
