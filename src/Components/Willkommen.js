@@ -13,28 +13,29 @@ const Willkommen = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Buch dein Pizza Catering für deine Feier! Ob...
+            Buche dein Pizza Catering für deine Feier! Egal, ob...
           </h1>
           <div className="primary-text">
             <ul>
               <p>Festival</p>
-              <p>Geburtstag</p>
-              <p>Firmenfeier</p>
+              <p>Geburtstage</p>
+              <p>Firmenfeiern</p>
               <p>Partys</p>
-              <p>...überall, wo eine köstliche Pizza gebraucht wird</p>
+              <p>Familienfeste</p>
+              <p>... oder überall sonst, wo eine köstliche Pizza nicht fehlen darf!</p>
             </ul>
             <p className='primary-text'>
-              Hey! Ich bin Amar und heiße dich auf meiner Seite herzlich Willkommen!
+              Hey! Ich bin Amar und heiße dich auf meiner Seite herzlich willkommen!
               <br />
               Eines Tages hatte ich Lust auf eine richtig gute italienische Pizza, jedoch wollte ich sie selbst zubereiten.
-              Dass ich irgendwann mal nicht nur für mich, sondern auch für andere Pizza backe, davon habe ich nur geträumt.
-              Das Unvorhersehbare hat eben seinen eigenen Zeitplan und Träume sollten verwirklicht werden.
+              Dass ich irgendwann mal nicht nur für mich, sondern auch für andere Pizza backe, davon habe ich nur geträumt
+              - aber Träume sollten verwirklicht werden.
               <br />
               <br />
-              Heute backe ich mit großer Leidenschaft neapoletanische Pizza und möchte diese Kunst mit euch teilen.
+              Heute backe ich mit großer Leidenschaft neapoletanische Pizza und möchte diese Kunst mit Euch teilen.
               <br />
               <br />
-              Ich freue mich auf eure Anfragen!
+              Ich freue mich auf Eure Anfragen!
             </p>
           </div>
         </div>

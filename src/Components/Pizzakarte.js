@@ -16,10 +16,10 @@ const Pizzakarte = () => {
         <br />
         <ol>
           <li className="primary-heading">Marinara</li>
-          <h2 className="primary-text">Tomatensoße, Knoblauch, Oregano, frischer Basilikum</h2>
+          <h2 className="primary-text">Tomatensoße, Knoblauch, Oregano, frisches Basilikum</h2>
           <br />
           <li className="primary-heading">Margherita</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Parmesan, frischer Basilikum</h2>
+          <h2 className="primary-text">Tomatensoße, Mozzarella, Parmesan, frisches Basilikum</h2>
           <br />
           <li className="primary-heading">Salami</li>
           <h2 className="primary-text">Tomatensoße, Mozzarella, Rindersalami</h2>

@@ -14,9 +14,13 @@ const Preise = () => {
         <div className="testimonial-section-bottom">
             <img src={ProfilePic} alt="" />
             <p>
-                Ich berechne eine Pauschale pro Pizza in Höhe von 10€. Darin enthalten ist:
+                Ich berechne eine Pauschale pro Pizza in Höhe von 10€. 
+                <br></br>
+                Darin enthalten sind:
+                <br></br>
+                <br></br>
                 <ul>
-                    <li>Beliebige Pizza</li>
+                    <li>eine beliebige Pizza aus der Pizzakarte</li>
                     <li>Auf- und Abbaukosten</li>
                     <li>Fahrtkosten</li>
                     <li>Reinigungskosten</li>
