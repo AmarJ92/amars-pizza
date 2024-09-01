@@ -8,20 +8,20 @@ const Preise = () => {
             <p className="primary-subheading">Preise</p>
             <h1 className="primary-heading">Fairness und Qualität harmonieren!</h1>
             <p className="primary-text">
-                Meine Devise: Ein Pizza Catering muss nicht teuer sein – bei mir ist köstliches Pizzavergnügen für jedermann erschwinglich!
+                Meine Devise: Ein Pizza Catering muss nicht teuer sein – bei mir ist köstliches Pizzavergnügen mit hochwertigen Zutaten für jedermann erschwinglich!
             </p>    
         </div>
         <div className="testimonial-section-bottom">
             <img src={ProfilePic} alt="" />
             <p>
-                Ich berechne eine Pauschale pro Pizza in Höhe von 10€. 
+                Ich berechne eine Pauschale pro Pizza in Höhe von 15€. 
                 <br></br>
                 Darin enthalten sind:
                 <br></br>
                 <br></br>
                 <ul>
                     <li>eine beliebige Pizza aus der Pizzakarte</li>
-                    <li>Auf- und Abbaukosten</li>
+                    <li>Servicepauschale</li>
                     <li>Fahrtkosten</li>
                     <li>Reinigungskosten</li>
                 </ul>

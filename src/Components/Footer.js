@@ -25,8 +25,8 @@ const Footer = () => {
                     <span>Amar Javid</span>
                     <span>0157 34312306</span>
                     <span>amar.javid@web.de</span>
-                    <span>Meersburgerstraße 15</span>
-                    <span>60386 Frankfurt</span>
+                    <span>Galvanistraße 29</span>
+                    <span>60486 Frankfurt</span>
                 </div>
             </div>
         </div>

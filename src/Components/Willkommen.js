@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import BannerBackground from "../Assets/home-banner-background.png"
-import MyPicture from "../Assets/me2.png"
+import MyPicture from "../Assets/me3.png"
 
 const Willkommen = () => {
   return (

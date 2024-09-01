@@ -10,24 +10,29 @@ const Buchung = () => {
             image: Eins,
             title: "Vorraussetzungen",
             text: <ul>
-              <li>Steckdose (230V)</li>
-              <li>Tisch/Küchenzeile mind. 1 m breit und mind. 90 cm hoch</li>
+              <li>Steckdose (230V, 3KW) - vorzugsweise Direktanschluss (ohne Kabeltrommel)</li>
+              <li>Tisch/Küchenzeile mind. 2 m breit und mind. 90 cm hoch</li>
               <li>Optional: Kühlschrank</li>
               <li>Optional: Parkmöglichkeit direkt am Pizzastand</li>
+              <li>Abhängig vom Wetter: Partyzelt</li>
             </ul>,
         },
         {
             image: Zwei,
             title: "Kontaktiere mich via...",
             text: <ul>
-            <a href="https://www.instagram.com/amars_pizza/">Instagram,</a>
-            <p>Email oder Handy und wir besprechen alle Details (wie Pizzasorten, Datum oder auch Veranstaltungsort)</p>
+            <a href="https://www.instagram.com/amars_pizza/">Instagram</a>
+            <br/>
+            <a>Email</a>
+            <br/>
+            <a>Whatsapp</a>
           </ul>,
         },
         {
             image: Drei,
             title: "Es kann losgehen!",
             text: "Nachdem alle Einzelheiten geklärt sind, kann die Party starten!",
+
         },
     ]
 

@@ -297,12 +297,11 @@ nav {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 .work-section-info p {
   flex: 1;
-  display: flex;
+  display: inline;
   align-items: center;
   font-weight: 600;
 }
@@ -390,7 +389,7 @@ nav {
     margin-top: 5rem !important;
   }
   .work-section-bottom {
-    margin-top: 1rem !important;
+    margin-top: 5rem !important;
   }
   .contact-form-container {
     padding: 0.5rem !important;
