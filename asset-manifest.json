@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/amars-pizza/static/css/main.c9784326.css",
-    "main.js": "/amars-pizza/static/js/main.ab13471d.js",
-    "static/media/me2.png": "/amars-pizza/static/media/me2.a43e942f1ed279a4949d.png",
+    "main.css": "/amars-pizza/static/css/main.d4e3b7e8.css",
+    "main.js": "/amars-pizza/static/js/main.4554203a.js",
+    "static/media/me3.png": "/amars-pizza/static/media/me3.e76defd066e33e212cd1.png",
     "static/media/pizza.png": "/amars-pizza/static/media/pizza.09da7eba21aa924e6b25.png",
     "static/media/me.png": "/amars-pizza/static/media/me.c1eda3c7364e5a1a64c1.png",
     "static/media/Amar's Pizza_Logo.png": "/amars-pizza/static/media/Amar's Pizza_Logo.55c1af4c8131430993e8.png",
     "static/media/home-banner-background.png": "/amars-pizza/static/media/home-banner-background.585600da7ff85661555e.png",
     "index.html": "/amars-pizza/index.html",
-    "main.c9784326.css.map": "/amars-pizza/static/css/main.c9784326.css.map",
-    "main.ab13471d.js.map": "/amars-pizza/static/js/main.ab13471d.js.map"
+    "main.d4e3b7e8.css.map": "/amars-pizza/static/css/main.d4e3b7e8.css.map",
+    "main.4554203a.js.map": "/amars-pizza/static/js/main.4554203a.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9784326.css",
-    "static/js/main.ab13471d.js"
+    "static/css/main.d4e3b7e8.css",
+    "static/js/main.4554203a.js"
   ]
 }
