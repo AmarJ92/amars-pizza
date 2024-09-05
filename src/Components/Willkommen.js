@@ -41,7 +41,7 @@ const Willkommen = () => {
         </div>
         <div className="home-image-container">
           <img src={MyPicture} alt="" />
-
+          <figcaption>Photo made by <a href="https://www.instagram.com/nico.leissner/">nico.leisner</a></figcaption>
         </div>
       </div>
     </div>
