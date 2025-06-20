@@ -13,29 +13,33 @@ const Willkommen = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Buche dein Pizza Catering für deine Feier! Egal, ob...
+            Buche dein Pizza-Catering – für jeden Anlass, der nach Genuss ruft!
           </h1>
           <div className="primary-text">
             <ul>
-              <p>Festival</p>
               <p>Geburtstage</p>
+              <p>Hochzeiten</p>
               <p>Firmenfeiern</p>
-              <p>Partys</p>
-              <p>Familienfeste</p>
-              <p>... oder überall sonst, wo eine köstliche Pizza nicht fehlen darf!</p>
+              <p>Kita- und Schulfeste</p>
+              <p>Sommerfeste</p>
+              <p>Festivals & Märkte</p>
+              <p>Private Gartenpartys</p>
+              <p>... oder einfach, weil Pizza immer passt!</p>
             </ul>
             <p className='primary-text'>
-              Hey! Ich bin Amar und heiße dich auf meiner Seite herzlich willkommen!
+              Hey! Ich bin Amar und freue mich riesig, dass du hier bist.
               <br />
-              Eines Tages hatte ich Lust auf eine richtig gute italienische Pizza, jedoch wollte ich sie selbst zubereiten.
-              Dass ich irgendwann mal nicht nur für mich, sondern auch für andere Pizza backe, davon habe ich nur geträumt
-              - aber Träume sollten verwirklicht werden.
-              <br />
-              <br />
-              Heute backe ich mit großer Leidenschaft neapoletanische Pizza und möchte diese Kunst mit Euch teilen.
+              Alles begann mit dem Wunsch nach einer richtig guten italienischen Pizza – selbst gemacht, mit Herz und Leidenschaft.
+              Was einst nur ein Traum war, wurde zur Realität: Heute teile ich meine Begeisterung für neapolitanische Pizza auf Events in ganz Frankfurt und Umgebung.
               <br />
               <br />
-              Ich freue mich auf Eure Anfragen!
+              Mit meinem mobilen Pizzaofen bringe ich echtes Streetfood-Feeling direkt zu euch – live gebacken, frisch belegt und ein echter Hingucker auf jeder Feier.
+              <br />
+              <br />
+              Lass uns gemeinsam ein Event schaffen, das in Erinnerung bleibt – mit knusprigem Rand, geschmolzenem Käse und ganz viel Amore.
+              <br />
+              <br />
+              Ich freue mich auf deine Anfrage!
             </p>
           </div>
         </div>
