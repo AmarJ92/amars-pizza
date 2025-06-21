@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../Assets/Amar's Pizza_Logo.png"
+import Logo from "../assets/Amar's Pizza_Logo.png"
 import { BsInstagram } from 'react-icons/bs'
 
 const Footer = () => {

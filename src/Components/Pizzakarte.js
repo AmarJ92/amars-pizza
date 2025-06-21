@@ -1,6 +1,6 @@
 import React from 'react'
-import AboutBackground from "../Assets/about-background.png"
-import PizzaImage from "../Assets/pizza.png"
+import AboutBackground from "../assets/about-background.png"
+import PizzaImage from "../assets/pizza.png"
 
 const Pizzakarte = () => {
   return (

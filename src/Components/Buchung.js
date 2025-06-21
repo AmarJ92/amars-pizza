@@ -1,7 +1,7 @@
 import React from 'react'
-import Eins from "../Assets/1.png"
-import Zwei from "../Assets/2.png"
-import Drei from "../Assets/3.png"
+import Eins from "../assets/1.png"
+import Zwei from "../assets/2.png"
+import Drei from "../assets/3.png"
 
 const Buchung = () => {
 

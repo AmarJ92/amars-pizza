@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import Logo from "../Assets/Amar's Pizza_Logo.png"
 
 const Navbar = () => {
