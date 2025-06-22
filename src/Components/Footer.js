@@ -24,6 +24,7 @@ const Footer = () => {
                     <span>Amar's Pizza</span>
                     <span>Amar Javid</span>
                     <span>0157 34312306</span>
+                    <span>0157 34312306</span>
                     <span>amar.javid@web.de</span>
                     <span>Galvanistraße 29</span>
                     <span>60486 Frankfurt</span>
