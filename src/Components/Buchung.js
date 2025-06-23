@@ -10,11 +10,11 @@ const Buchung = () => {
             image: Eins,
             title: "Vorraussetzungen",
             text: <ul>
-              <li>Steckdose (230V, 3KW) - vorzugsweise Direktanschluss (ohne Kabeltrommel)</li>
-              <li>Tisch/Küchenzeile mind. 2 m breit und mind. 90 cm hoch</li>
-              <li>Optional: Kühlschrank</li>
-              <li>Optional: Parkmöglichkeit direkt am Pizzastand</li>
-              <li>Abhängig vom Wetter: Partyzelt</li>
+              <li>Steckdose (230V, 3KW) - Direktanschluss (ohne Kabeltrommel)</li>
+              <li>Tisch/Küchenzeile mind. 2 m breit und 90-100 cm hoch</li>
+              <li>Nice-to-have: Kühlschrank</li>
+              <li>Nice-to-have: Parkmöglichkeit direkt am Pizzastand</li>
+              <li>Bei Regen: Partyzelt</li>
             </ul>,
         },
         {
@@ -31,7 +31,7 @@ const Buchung = () => {
         {
             image: Drei,
             title: "Es kann losgehen!",
-            text: "Nachdem alle Einzelheiten geklärt sind, kann die Party starten!",
+            text: "Nachdem alle Einzelheiten geklärt sind, kann die Pizza-Party starten!",
 
         },
     ]
