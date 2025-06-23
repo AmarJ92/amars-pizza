@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/amars-pizza/static/css/main.d4e3b7e8.css",
-    "main.js": "/amars-pizza/static/js/main.5cc466ed.js",
+    "main.js": "/amars-pizza/static/js/main.ed69f692.js",
     "static/media/me3.png": "/amars-pizza/static/media/me3.e76defd066e33e212cd1.png",
     "static/media/pizza.png": "/amars-pizza/static/media/pizza.09da7eba21aa924e6b25.png",
     "static/media/me.png": "/amars-pizza/static/media/me.c1eda3c7364e5a1a64c1.png",
@@ -9,10 +9,10 @@
     "static/media/home-banner-background.png": "/amars-pizza/static/media/home-banner-background.585600da7ff85661555e.png",
     "index.html": "/amars-pizza/index.html",
     "main.d4e3b7e8.css.map": "/amars-pizza/static/css/main.d4e3b7e8.css.map",
-    "main.5cc466ed.js.map": "/amars-pizza/static/js/main.5cc466ed.js.map"
+    "main.ed69f692.js.map": "/amars-pizza/static/js/main.ed69f692.js.map"
   },
   "entrypoints": [
     "static/css/main.d4e3b7e8.css",
-    "static/js/main.5cc466ed.js"
+    "static/js/main.ed69f692.js"
   ]
 }
