@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="307305b1-750c-4234-a201-d60c7f7e40cb" name="Changes" comment="Enhance website layout and functionality - Add Kontakt form, update Navbar and Footer, and improve CSS styles" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="cedb7979-ab03-4dff-980f-f97137a1222e" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="cedb7979-ab03-4dff-980f-f97137a1222e" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/mrjav/Documents/Amar's Pizza/webseite/amars_pizza" value="2ymBs9yIQbobYv4aQNv6SoYexX7" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AmarJ92&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AmarJ92/amars-pizza.git&quot;,
+    &quot;accountId&quot;: &quot;65b21d79-5702-48ae-8574-046d6bd707a3&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ymBs9yIQbobYv4aQNv6SoYexX7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "gh-pages",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mrjav/Documents/Amar's Pizza/webseite/amars_pizza/src/Assets",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src\Assets" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src\Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src\Components" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\public" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src\Assets" />
+      <recent name="C:\Users\mrjav\Documents\Amar's Pizza\webseite\amars_pizza\src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33514.17" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="307305b1-750c-4234-a201-d60c7f7e40cb" name="Changes" comment="" />
+      <created>1750430073528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750430073528</updated>
+    </task>
+    <task id="LOCAL-00001" summary="changed text of welcome page">
+      <option name="closed" value="true" />
+      <created>1750431243660</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750431243660</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changed photo">
+      <option name="closed" value="true" />
+      <created>1750432442720</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750432442720</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed photo">
+      <option name="closed" value="true" />
+      <created>1750432561324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750432561324</updated>
+    </task>
+    <task id="LOCAL-00004" summary="reverted">
+      <option name="closed" value="true" />
+      <created>1750522626577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750522626577</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated project">
+      <option name="closed" value="true" />
+      <created>1750523906466</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750523906466</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated project">
+      <option name="closed" value="true" />
+      <created>1750618661185</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750618661185</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated project">
+      <option name="closed" value="true" />
+      <created>1750618902054</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750618902054</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated project">
+      <option name="closed" value="true" />
+      <created>1750713905501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750713905501</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Enhance website layout and functionality - Add Kontakt form, update Navbar and Footer, and improve CSS styles">
+      <option name="closed" value="true" />
+      <created>1778355566580</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778355566580</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed text of welcome page" />
+    <MESSAGE value="changed photo" />
+    <MESSAGE value="reverted" />
+    <MESSAGE value="updated project" />
+    <MESSAGE value="Enhance website layout and functionality - Add Kontakt form, update Navbar and Footer, and improve CSS styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance website layout and functionality - Add Kontakt form, update Navbar and Footer, and improve CSS styles" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
