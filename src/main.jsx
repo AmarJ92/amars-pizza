@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <h1 style={{ padding: 40, fontFamily: "sans-serif" }}>
-    Production Preview läuft ✅
-  </h1>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
