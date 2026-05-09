@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Assets/Amar\'s Pizza_Logo.png'; // Assuming the logo is in Assets
+import Logo from '../Assets/Amar\'s Pizza_Logo.png';
 
 const Navbar = () => {
   return (
@@ -13,6 +13,7 @@ const Navbar = () => {
         <li><a href="#preise">Preise</a></li>
         <li><a href="#buchung">Buchung</a></li>
         <li><a href="#sonstiges">Sonstiges</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
   );

@@ -1,15 +1,12 @@
 import React from 'react'
-import Eins from "../Assets/1.png"
-import Zwei from "../Assets/2.png"
-import Drei from "../Assets/3.png"
 
 const Buchung = () => {
 
     const workInfoData = [
         {
-            image: Eins,
+            icon: '⚡',
             title: "Vorraussetzungen",
-            text: <ul>
+            text: <ul style={{ textAlign: 'left' }}>
               <li>Steckdose (230V, 3KW) - Direktanschluss (ohne Kabeltrommel)</li>
               <li>Tisch/Küchenzeile mind. 2 m breit und 90-100 cm hoch</li>
               <li>Nice-to-have: Kühlschrank</li>
@@ -18,20 +15,20 @@ const Buchung = () => {
             </ul>,
         },
         {
-            image: Zwei,
+            icon: '📱',
             title: "Kontaktiere mich via...",
-            text: <ul>
-            <a href="https://www.instagram.com/amars_pizza/">Instagram</a>
-            <br/>
-            <a>Email</a>
-            <br/>
-            <a>Whatsapp</a>
+            text: <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+            <li><a href="https://www.instagram.com/amars_pizza/" target="_blank" rel="noopener noreferrer">📷 Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@amar.javid?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">🎵 TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61570978888884" target="_blank" rel="noopener noreferrer">👍 Facebook</a></li>
+            <li><a href="mailto:info@amars-pizza.de">✉️ Email</a></li>
+            <li><a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
           </ul>,
         },
         {
-            image: Drei,
+            icon: '🎉',
             title: "Es kann losgehen!",
-            text: "Nachdem alle Einzelheiten geklärt sind, kann die Pizza-Party starten!",
+            text: "Nachdem alle Einzelheiten geklärt sind, kann die Pizza-Party starten! Deine Gäste werden es lieben!",
 
         },
     ]
@@ -46,10 +43,10 @@ const Buchung = () => {
         </p>
       </div>
       <div className="work-section-bottom">
-        {workInfoData.map((data) => (
-            <div className="work-section-info">
+        {workInfoData.map((data, index) => (
+            <div key={index} className="work-section-info">
                 <div className="info-boxes-img-container">
-                    <img src={data.image} alt="" />
+                    <span style={{ fontSize: '3rem' }}>{data.icon}</span>
                 </div>
                 <h2>{data.title}</h2>
                 <p>{data.text}</p>

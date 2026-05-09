@@ -4,9 +4,10 @@ import Willkommen from './Components/Willkommen';
 import Pizzakarte from './Components/Pizzakarte';
 import Preise from './Components/Preise';
 import Buchung from './Components/Buchung';
+import Kontakt from './Components/Kontakt';
 import Sonstiges from './Components/Sonstiges';
 import Footer from './Components/Footer';
-import './App.css'; // Assuming there is a CSS file
+import './App.css';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Preise />
       <Buchung />
       <Sonstiges />
+      <Kontakt />
       <Footer />
     </div>
   );

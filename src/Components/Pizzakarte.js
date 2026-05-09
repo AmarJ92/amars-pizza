@@ -1,15 +1,11 @@
 import React from 'react'
-import AboutBackground from "../assets/about-background.png"
-import PizzaImage from "../assets/pizza.png"
+import PizzaImage from "../Assets/pizza.09da7eba21aa924e6b25.png"
 
 const Pizzakarte = () => {
   return (
     <div id="pizzakarte" className="about-section-container">
-      <div>
-        <img src={AboutBackground} alt="" />
-      </div>
       <div className="about-section-image-container">
-        <img src={PizzaImage} alt="" />
+        <img src={PizzaImage} alt="Pizza" />
       </div>
       <div className="about-section-text-container">
         <p className="primary-subheading">Pizzakarte</p>
