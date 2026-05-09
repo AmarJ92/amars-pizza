@@ -1,12 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
 import BannerBackground from "../Assets/home-banner-background.png"
 import MyPicture from "../Assets/me3.png"
 
 const Willkommen = () => {
   return (
-    <div className="home-container">
-      <Navbar />
+    <div id="willkommen" className="home-container">
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           <img src={BannerBackground} alt="" />

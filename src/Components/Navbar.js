@@ -1,44 +1,22 @@
-import { Link } from 'react-scroll';
-import Logo from "../Assets/Amar's Pizza_Logo.png"
+import React from 'react';
+import Logo from '../Assets/Amar\'s Pizza_Logo.png';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="nav-logo-container">
-        <img src={Logo} alt="" />
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <img src={Logo} alt="Amar's Pizza Logo" />
       </div>
-      <div className="navbar-links-container">
-         <Link
-          activeClass="active"
-          to="pizzakarte"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >Pizzakarte</Link>
-        <Link
-          activeClass="active"
-          to="buchung"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >Buchung</Link>
-        <Link
-          activeClass="active"
-          to="preise"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >Preise</Link>
-        <Link
-          activeClass="active"
-          to="sonstiges"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >Sonstiges</Link>
-      </div>
+      <ul className="navbar-links">
+        <li><a href="#willkommen">Willkommen</a></li>
+        <li><a href="#pizzakarte">Pizzakarte</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#buchung">Buchung</a></li>
+        <li><a href="#sonstiges">Sonstiges</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </nav>
   );
 };
 
-export default Navbar
+export default Navbar;

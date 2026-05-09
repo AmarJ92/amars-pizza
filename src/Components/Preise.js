@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfilePic from "../Assets/me.png"
+import ProfilePic from "../Assets/me.c1eda3c7364e5a1a64c1.png"
 
 const Preise = () => {
   return (

@@ -1,31 +1,24 @@
-import './App.css';
+import React from 'react';
+import Navbar from './Components/Navbar';
 import Willkommen from './Components/Willkommen';
 import Pizzakarte from './Components/Pizzakarte';
-import Buchung from './Components/Buchung';
 import Preise from './Components/Preise';
+import Buchung from './Components/Buchung';
+import Kontakt from './Components/Kontakt';
 import Sonstiges from './Components/Sonstiges';
 import Footer from './Components/Footer';
-import { Element } from 'react-scroll';
-import ScrollToTop from './Components/ScrollToTop'
+import './App.css';
 
 function App() {
-
   return (
     <div className="App">
-      <ScrollToTop />
+      <Navbar />
       <Willkommen />
-      <Element name="pizzakarte">
-        <Pizzakarte />
-      </Element>
-      <Element name="buchung">
+      <Pizzakarte />
+      <Preise />
       <Buchung />
-      </Element>
-      <Element name="preise">
-        <Preise />
-      </Element>
-      <Element name="sonstiges">
-        <Sonstiges />
-      </Element>
+      <Sonstiges />
+      <Kontakt />
       <Footer />
     </div>
   );
