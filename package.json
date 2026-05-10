@@ -7,6 +7,10 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^9.0.1",
     "@mui/material": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.4",
+    "nodemailer": "^6.9.4",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-icons": "^5.6.0",
@@ -14,6 +18,7 @@
   },
   "scripts": {
     "start": "vite",
+    "server": "node server.js",
     "deploy": "npm run build",
     "build": "vite build",
     "dev": "vite",

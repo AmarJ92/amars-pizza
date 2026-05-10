@@ -1,30 +1,25 @@
 import React from 'react'
-import BannerBackground from "../Assets/home-banner-background.png"
-import MyPicture from "../Assets/me3.png"
 
 const Willkommen = () => {
   return (
     <div id="willkommen" className="home-container">
       <div className="home-banner-container">
-        <div className="home-bannerImage-container">
-          <img src={BannerBackground} alt="" />
-        </div>
-        <div className="home-text-section">
+        <div className="home-text-section" style={{ flex: 1 }}>
           <h1 className="primary-heading">
             Buche dein Pizza-Catering – für jeden Anlass, der nach Genuss ruft!
           </h1>
           <div className="primary-text">
             <ul>
-              <p>Geburtstage</p>
-              <p>Hochzeiten</p>
-              <p>Firmenfeiern</p>
-              <p>Kita- und Schulfeste</p>
-              <p>Sommerfeste</p>
-              <p>Festivals & Märkte</p>
-              <p>Private Gartenpartys</p>
-              <p>... oder einfach, weil Pizza immer passt!</p>
+              <li>Geburtstage</li>
+              <li>Hochzeiten</li>
+              <li>Firmenfeiern</li>
+              <li>Kita- und Schulfeste</li>
+              <li>Sommerfeste</li>
+              <li>Festivals & Märkte</li>
+              <li>Private Gartenpartys</li>
+              <li>... oder einfach, weil Pizza immer passt!</li>
             </ul>
-            <p className='primary-text'>
+            <p>
               Hey! Ich bin Amar und freue mich riesig, dass du hier bist.
               <br />
               Alles begann mit dem Wunsch nach einer richtig guten italienischen Pizza – selbst gemacht, mit Herz und Leidenschaft.
@@ -40,10 +35,6 @@ const Willkommen = () => {
               Ich freue mich auf deine Anfrage!
             </p>
           </div>
-        </div>
-        <div className="home-image-container">
-          <img src={MyPicture} alt="" />
-          <figcaption>Photo made by <a href="https://www.instagram.com/nico.leissner/">nico.leisner</a></figcaption>
         </div>
       </div>
     </div>
