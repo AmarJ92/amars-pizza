@@ -1,15 +1,15 @@
 import React from 'react'
-import PizzaImage from "../Assets/pizza.09da7eba21aa924e6b25.png"
+import PizzaImage from "../Assets/me3.png"
 
 const Pizzakarte = () => {
   return (
     <div id="pizzakarte" className="about-section-container">
       <div className="about-section-image-container">
-        <img src={PizzaImage} alt="Pizza" />
+        <img src={PizzaImage} alt="Pizza by Nico Leissner" />
+        <p className="photo-credit">Photo made by: <a href="https://www.instagram.com/nico.leissner/" target="_blank" rel="noopener noreferrer">@nico.leissner</a></p>
       </div>
       <div className="about-section-text-container">
         <p className="primary-subheading">Pizzakarte</p>
-        <br />
         <ol>
           <li>
             <h2 className="primary-heading">Marinara</h2>

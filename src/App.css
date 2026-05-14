@@ -158,13 +158,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  padding: 3rem 5%;
+  gap: 2rem;
+  padding: 3rem 3%;
   background-color: var(--accent);
 }
 
 .about-section-image-container {
-  flex: 0.5;
+  flex: 0.45;
+}
+
+.about-section-text-container {
+  flex: 0.6;
 }
 
 .about-section-image-container img {
@@ -174,12 +178,15 @@ body {
   box-shadow: 0 10px 30px rgba(0, 146, 70, 0.2);
 }
 
-.about-section-text-container {
-  flex: 1;
+.photo-credit {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
 }
 
-.about-section-text-container ol {
-  list-style-position: inside;
+.photo-credit a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .about-section-text-container li {
