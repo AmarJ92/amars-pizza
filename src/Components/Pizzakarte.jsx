@@ -11,26 +11,34 @@ const Pizzakarte = () => {
         <p className="primary-subheading">Pizzakarte</p>
         <br />
         <ol>
-          <li className="primary-heading">Marinara</li>
-          <h2 className="primary-text">Tomatensoße, Knoblauch, Oregano, frisches Basilikum</h2>
-          <br />
-          <li className="primary-heading">Margherita</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Parmesan, frisches Basilikum</h2>
-          <br />
-          <li className="primary-heading">Salami</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Rindersalami</h2>
-          <br />
-          <li className="primary-heading">Sucuk</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Sucuk, Jalapenos</h2>
-          <br />
-          <li className="primary-heading">Tonno</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Parmesan, Thunfisch, Zwiebel</h2>
-          <br />
-          <li className="primary-heading">Veggie</li>
-          <h2 className="primary-text">Tomatensoße, Mozzarella, Parmesan, gebratene Gemüsevariation aus Paprika, Aubergine und Champions</h2>
-          <br />
-          <li className="primary-heading">Nutella</li>
-          <h2 className="primary-text">Nutella, Haselnüsse, Sahne</h2>
+          <li>
+            <h2 className="primary-heading">Marinara</h2>
+            <p className="primary-text">Tomatensoße, Knoblauch, Oregano, frisches Basilikum</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Margherita</h2>
+            <p className="primary-text">Tomatensoße, Mozzarella, Parmesan, frisches Basilikum</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Salami</h2>
+            <p className="primary-text">Tomatensoße, Mozzarella, Rindersalami</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Sucuk</h2>
+            <p className="primary-text">Tomatensoße, Mozzarella, Sucuk, Jalapenos</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Tonno</h2>
+            <p className="primary-text">Tomatensoße, Mozzarella, Parmesan, Thunfisch, Zwiebel</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Veggie</h2>
+            <p className="primary-text">Tomatensoße, Mozzarella, Parmesan, gebratene Gemüsevariation aus Paprika, Aubergine und Champignons</p>
+          </li>
+          <li>
+            <h2 className="primary-heading">Nutella</h2>
+            <p className="primary-text">Nutella, Haselnüsse, Sahne</p>
+          </li>
         </ol>
       </div>
     </div>

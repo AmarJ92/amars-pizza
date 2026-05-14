@@ -11,14 +11,17 @@ const PORT = process.env.SERVER_PORT || 3000;
 const EMAIL_TO = process.env.EMAIL_TO || 'Amar.Javid@web.de';
 const EMAIL_FROM = process.env.EMAIL_FROM || process.env.SMTP_USER || 'no-reply@amars-pizza.de';
 
+// Check if SMTP is configured
+const isSmtpConfigured = process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS;
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.example.com',
   port: parseInt(process.env.SMTP_PORT || '587', 10),
   secure: process.env.SMTP_SECURE === 'true',
-  auth: {
+  auth: isSmtpConfigured ? {
     user: process.env.SMTP_USER || '',
     pass: process.env.SMTP_PASS || ''
-  }
+  } : undefined
 });
 
 function yesNo(value) {
@@ -72,6 +75,16 @@ app.post('/api/send-email', async (req, res) => {
     return res.status(400).json({ error: 'Name, Email und Telefon sind erforderlich.' });
   }
 
+  if (!isSmtpConfigured) {
+    console.log('SMTP nicht konfiguriert - Testmodus aktiviert');
+    console.log('E-Mail-Inhalt:', buildEmailBody(data));
+    return res.json({
+      ok: true,
+      message: 'Testmodus: E-Mail wurde nicht gesendet, aber die Daten wurden verarbeitet. Konfiguriere SMTP in .env für echten Versand.',
+      testMode: true
+    });
+  }
+
   const mailOptions = {
     from: EMAIL_FROM,
     to: EMAIL_TO,
@@ -88,6 +101,20 @@ app.post('/api/send-email', async (req, res) => {
   }
 });
 
+app.use((err, req, res, next) => {
+  console.error('Unhandled server error:', err);
+  if (res.headersSent) {
+    return next(err);
+  }
+  res.status(500).json({ error: 'Interner Serverfehler. Bitte versuche es später erneut.' });
+});
+
 app.listen(PORT, () => {
   console.log(`E-Mail-Service läuft auf http://localhost:${PORT}`);
+  if (!isSmtpConfigured) {
+    console.log('⚠️  SMTP nicht konfiguriert - läuft im Testmodus');
+    console.log('Erstelle eine .env-Datei mit SMTP-Konfiguration für echten E-Mail-Versand');
+  } else {
+    console.log('✅ SMTP konfiguriert - E-Mail-Versand aktiv');
+  }
 });

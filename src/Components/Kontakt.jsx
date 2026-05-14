@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const initialFormState = {
   name: '',
@@ -29,6 +30,37 @@ const initialFormState = {
   contentConsent: false,
   paymentMethod: 'Rechnung'
 };
+
+const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const emailJsConfigured = Boolean(emailServiceId && emailTemplateId && emailPublicKey);
+
+function yesNo(value) {
+  return value === true || value === 'true' ? 'Ja' : 'Nein';
+}
+
+function buildEmailMessage(data) {
+  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nUhrzeit: ${data.time || '-'}\nOrt/Stadt: ${data.location || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
+    `Marinara: ${data.marinara || '0'}\n` +
+    `Margherita: ${data.margherita || '0'}\n` +
+    `Salami: ${data.salami || '0'}\n` +
+    `Sucuk: ${data.sucuk || '0'}\n` +
+    `Tonno: ${data.tonno || '0'}\n` +
+    `Veggie: ${data.veggie || '0'}\n\n` +
+    `Ausgabe: ${data.servings || '-'}\n` +
+    `Steckdose (230V): ${yesNo(data.powerAvailable)}\n` +
+    `Tisch/Küchenzeile: ${yesNo(data.tableAvailable)}\n` +
+    `Kühlschrank: ${yesNo(data.fridgeAvailable)}\n` +
+    `Parkmöglichkeiten: ${yesNo(data.parkingAvailable)}\n` +
+    `Event draußen: ${yesNo(data.outdoor)}\n` +
+    `Zelt bei Regen: ${data.tentIfRain || 'Nicht angegeben'}\n` +
+    `Waschbecken: ${yesNo(data.sinkAvailable)}\n` +
+    `Teller gestellt: ${yesNo(data.platesProvided)}\n` +
+    `Content für Instagram erlaubt: ${yesNo(data.contentConsent)}\n` +
+    `Angebot gewünscht: ${yesNo(data.offerWanted)}\n\n` +
+    `Zusätzliche Informationen:\n${data.additionalInfo || 'Keine zusätzlichen Informationen.'}`;
+}
 
 const Kontakt = () => {
   const [formData, setFormData] = useState(initialFormState);
@@ -61,26 +93,54 @@ const Kontakt = () => {
       return;
     }
 
+    if (!emailJsConfigured) {
+      setStatus({
+        type: 'error',
+        message: 'EmailJS ist nicht konfiguriert. Bitte prüfe die VITE_EMAILJS_* Werte in deiner .env-Datei.'
+      });
+      return;
+    }
+
     setLoading(true);
 
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      event_date: formData.eventDate,
+      time: formData.time,
+      location: formData.location,
+      payment_method: formData.paymentMethod,
+      pizza_quantity: formData.pizzaQuantity,
+      marinara: formData.marinara || '0',
+      margherita: formData.margherita || '0',
+      salami: formData.salami || '0',
+      sucuk: formData.sucuk || '0',
+      tonno: formData.tonno || '0',
+      veggie: formData.veggie || '0',
+      servings: formData.servings,
+      power_available: yesNo(formData.powerAvailable),
+      table_available: yesNo(formData.tableAvailable),
+      fridge_available: yesNo(formData.fridgeAvailable),
+      parking_available: yesNo(formData.parkingAvailable),
+      outdoor: yesNo(formData.outdoor),
+      tent_if_rain: formData.tentIfRain || 'Nicht angegeben',
+      sink_available: yesNo(formData.sinkAvailable),
+      plates_provided: yesNo(formData.platesProvided),
+      content_consent: yesNo(formData.contentConsent),
+      offer_wanted: yesNo(formData.offerWanted),
+      additional_info: formData.additionalInfo || 'Keine zusätzlichen Informationen.',
+      message: buildEmailMessage(formData)
+    };
+
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error || 'Beim Versand der Anfrage ist ein Fehler aufgetreten.');
-      }
-
+      await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey);
       setStatus({ type: 'success', message: 'Deine Anfrage wurde gesendet. Ich melde mich bald bei dir.' });
       setFormData(initialFormState);
     } catch (error) {
-      setStatus({ type: 'error', message: error.message });
+      setStatus({ type: 'error', message: error.text || error.message || 'Beim Versand der Anfrage ist ein Fehler aufgetreten.' });
     } finally {
       setLoading(false);
     }
@@ -426,6 +486,19 @@ const Kontakt = () => {
               Nein
             </label>
           </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="additionalInfo">Sonstige Informationen</label>
+          <textarea
+            id="additionalInfo"
+            name="additionalInfo"
+            value={formData.additionalInfo}
+            onChange={handleChange}
+            placeholder="Was soll ich sonst noch wissen?"
+            rows="5"
+            disabled={loading}
+          />
         </div>
 
         <div className="checkbox-group">

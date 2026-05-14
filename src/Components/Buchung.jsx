@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaInstagram, FaTiktok, FaFacebook, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 
 const Buchung = () => {
 
@@ -7,22 +8,26 @@ const Buchung = () => {
             icon: '⚡',
             title: "Vorraussetzungen",
             text: <ul style={{ textAlign: 'left' }}>
-              <li>Steckdose (230V, 3KW) - Direktanschluss (ohne Kabeltrommel)</li>
-              <li>Tisch/Küchenzeile mind. 2 m breit und 90-100 cm hoch</li>
-              <li>Nice-to-have: Kühlschrank</li>
-              <li>Nice-to-have: Parkmöglichkeit direkt am Pizzastand</li>
-              <li>Bei Regen: Partyzelt</li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span role="img" aria-label="Steckdose">🔌</span>
+                Steckdose (230V, 3KW) - Direktanschluss (ohne Kabeltrommel)
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span role="img" aria-label="Tisch">🪑</span>
+                Tisch/Küchenzeile mind. 2 m breit und 90-100 cm hoch
+              </li>
             </ul>,
         },
         {
             icon: '📱',
             title: "Kontaktiere mich via...",
             text: <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-            <li><a href="https://www.instagram.com/amars_pizza/" target="_blank" rel="noopener noreferrer">📷 Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@amar.javid?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">🎵 TikTok</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61570978888884" target="_blank" rel="noopener noreferrer">👍 Facebook</a></li>
-            <li><a href="mailto:info@amars-pizza.de">✉️ Email</a></li>
-            <li><a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/amars_pizza/" target="_blank" rel="noopener noreferrer"><FaInstagram style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@amar.javid?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"><FaTiktok style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61570978888884" target="_blank" rel="noopener noreferrer"><FaFacebook style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> Facebook</a></li>
+            <li><a href="mailto:info@amars-pizza.de"><FaEnvelope style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> Email</a></li>
+            <li><a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer"><FaWhatsapp style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> WhatsApp</a></li>
+            <li style={{ marginTop: '1rem', fontWeight: '600' }}>Oder nutze das Anfrage-Formular weiter unten auf der Seite.</li>
           </ul>,
         },
         {
@@ -49,7 +54,7 @@ const Buchung = () => {
                     <span style={{ fontSize: '3rem' }}>{data.icon}</span>
                 </div>
                 <h2>{data.title}</h2>
-                <p>{data.text}</p>
+                {typeof data.text === 'string' ? <p>{data.text}</p> : <div>{data.text}</div>}
             </div>
         ))}
       </div>
