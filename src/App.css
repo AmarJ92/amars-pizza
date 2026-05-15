@@ -20,6 +20,10 @@ body {
   background-color: var(--accent);
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 /* NAVBAR */
 .navbar {
   background-color: var(--color-white);

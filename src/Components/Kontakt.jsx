@@ -78,10 +78,22 @@ const Kontakt = () => {
       else if (value === 'false') nextValue = false;
     }
 
-    setFormData({
+    const updatedFormData = {
       ...formData,
       [name]: nextValue
-    });
+    };
+
+    // Berechne die Gesamtanzahl der Pizzen automatisch
+    const pizzaFields = ['marinara', 'margherita', 'salami', 'sucuk', 'tonno', 'veggie'];
+    if (pizzaFields.includes(name)) {
+      const totalPizzas = pizzaFields.reduce((sum, field) => {
+        const val = parseInt(updatedFormData[field] || 0, 10);
+        return sum + (isNaN(val) ? 0 : val);
+      }, 0);
+      updatedFormData.pizzaQuantity = totalPizzas.toString();
+    }
+
+    setFormData(updatedFormData);
   };
 
   const handleSubmit = async (e) => {
@@ -90,6 +102,16 @@ const Kontakt = () => {
 
     if (!formData.name || !formData.email || !formData.phone) {
       setStatus({ type: 'error', message: 'Bitte fülle Name, Email und Telefon aus.' });
+      return;
+    }
+
+    const totalPizzas = parseInt(formData.pizzaQuantity || 0, 10);
+    if (totalPizzas < 12) {
+      setStatus({ type: 'error', message: 'Mindestbestellmenge beträgt 12 Pizzen.' });
+      return;
+    }
+    if (totalPizzas > 100) {
+      setStatus({ type: 'error', message: 'Maximalbestellmenge beträgt 100 Pizzen.' });
       return;
     }
 
@@ -268,7 +290,7 @@ const Kontakt = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="pizzaQuantity">* Gesamtanzahl der Pizzen</label>
+          <label htmlFor="pizzaQuantity">Gesamtanzahl der Pizzen (wird automatisch berechnet)</label>
           <input
             type="number"
             id="pizzaQuantity"
@@ -277,8 +299,9 @@ const Kontakt = () => {
             onChange={handleChange}
             required
             min="1"
-            placeholder="z.B. 35"
+            placeholder="wird automatisch berechnet"
             disabled={loading}
+            readOnly
           />
         </div>
 
