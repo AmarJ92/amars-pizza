@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const initialFormState = {
@@ -18,6 +18,7 @@ const initialFormState = {
   sucuk: '',
   tonno: '',
   veggie: '',
+  nutella: '',
   servings: '6 Slices',
   powerAvailable: true,
   tableAvailable: true,
@@ -47,7 +48,8 @@ function buildEmailMessage(data) {
     `Salami: ${data.salami || '0'}\n` +
     `Sucuk: ${data.sucuk || '0'}\n` +
     `Tonno: ${data.tonno || '0'}\n` +
-    `Veggie: ${data.veggie || '0'}\n\n` +
+    `Veggie: ${data.veggie || '0'}\n` +
+    `Nutella: ${data.nutella || '0'}\n\n` +
     `Ausgabe: ${data.servings || '-'}\n` +
     `Steckdose (230V): ${yesNo(data.powerAvailable)}\n` +
     `Tisch/Küchenzeile: ${yesNo(data.tableAvailable)}\n` +
@@ -66,6 +68,13 @@ const Kontakt = () => {
   const [formData, setFormData] = useState(initialFormState);
   const [status, setStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const statusRef = useRef(null);
+
+  useEffect(() => {
+    if (status.message && statusRef.current) {
+      statusRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [status.message]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -84,7 +93,7 @@ const Kontakt = () => {
     };
 
     // Berechne die Gesamtanzahl der Pizzen automatisch
-    const pizzaFields = ['marinara', 'margherita', 'salami', 'sucuk', 'tonno', 'veggie'];
+    const pizzaFields = ['marinara', 'margherita', 'salami', 'sucuk', 'tonno', 'veggie', 'nutella'];
     if (pizzaFields.includes(name)) {
       const totalPizzas = pizzaFields.reduce((sum, field) => {
         const val = parseInt(updatedFormData[field] || 0, 10);
@@ -142,6 +151,7 @@ const Kontakt = () => {
       sucuk: formData.sucuk || '0',
       tonno: formData.tonno || '0',
       veggie: formData.veggie || '0',
+      nutella: formData.nutella || '0',
       servings: formData.servings,
       power_available: yesNo(formData.powerAvailable),
       table_available: yesNo(formData.tableAvailable),
@@ -168,6 +178,13 @@ const Kontakt = () => {
     }
   };
 
+  const pizzaTotal = parseInt(formData.pizzaQuantity || '0', 10);
+  const pizzaQuantityError = pizzaTotal > 0 && pizzaTotal < 12
+    ? 'Mindestbestellmenge beträgt 12 Pizzen.'
+    : pizzaTotal > 100
+      ? 'Maximalbestellmenge beträgt 100 Pizzen.'
+      : '';
+
   return (
     <div id="kontakt" className="contact-form-wrapper">
       <h1 className="primary-heading">Sende mir eine Anfrage!</h1>
@@ -176,8 +193,7 @@ const Kontakt = () => {
       </p>
 
       {status.message && (
-        <div
-          style={{
+        <div          ref={statusRef}          style={{
             backgroundColor: status.type === 'success' ? '#009246' : '#ce2b37',
             color: 'white',
             padding: '1rem',
@@ -303,70 +319,108 @@ const Kontakt = () => {
             disabled={loading}
             readOnly
           />
+          {pizzaQuantityError && (
+            <p style={{ color: '#ce2b37', marginTop: '0.5rem' }}>
+              {pizzaQuantityError}
+            </p>
+          )}
         </div>
 
         <div className="form-group">
           <label>Anzahl pro Pizza-Sorte</label>
-          <input
-            type="number"
-            id="marinara"
-            name="marinara"
-            value={formData.marinara}
-            onChange={handleChange}
-            min="0"
-            placeholder="Marinara"
-            disabled={loading}
-          />
-          <input
-            type="number"
-            id="margherita"
-            name="margherita"
-            value={formData.margherita}
-            onChange={handleChange}
-            min="0"
-            placeholder="Margherita"
-            disabled={loading}
-          />
-          <input
-            type="number"
-            id="salami"
-            name="salami"
-            value={formData.salami}
-            onChange={handleChange}
-            min="0"
-            placeholder="Salami"
-            disabled={loading}
-          />
-          <input
-            type="number"
-            id="sucuk"
-            name="sucuk"
-            value={formData.sucuk}
-            onChange={handleChange}
-            min="0"
-            placeholder="Sucuk"
-            disabled={loading}
-          />
-          <input
-            type="number"
-            id="tonno"
-            name="tonno"
-            value={formData.tonno}
-            onChange={handleChange}
-            min="0"
-            placeholder="Tonno"
-            disabled={loading}
-          />
-          <input
-            type="number"
-            id="veggie"
-            name="veggie"
-            value={formData.veggie}
-            onChange={handleChange}
-            min="0"
-            placeholder="Veggie"
-            disabled={loading}
-          />
+          <div className="pizza-count-grid">
+            <label htmlFor="marinara">
+              Marinara
+              <input
+                type="number"
+                id="marinara"
+                name="marinara"
+                value={formData.marinara}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="margherita">
+              Margherita
+              <input
+                type="number"
+                id="margherita"
+                name="margherita"
+                value={formData.margherita}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="salami">
+              Salami
+              <input
+                type="number"
+                id="salami"
+                name="salami"
+                value={formData.salami}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="sucuk">
+              Sucuk
+              <input
+                type="number"
+                id="sucuk"
+                name="sucuk"
+                value={formData.sucuk}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="tonno">
+              Tonno
+              <input
+                type="number"
+                id="tonno"
+                name="tonno"
+                value={formData.tonno}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="veggie">
+              Veggie
+              <input
+                type="number"
+                id="veggie"
+                name="veggie"
+                value={formData.veggie}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+            <label htmlFor="nutella">
+              Nutella
+              <input
+                type="number"
+                id="nutella"
+                name="nutella"
+                value={formData.nutella}
+                onChange={handleChange}
+                min="0"
+                placeholder="0"
+                disabled={loading}
+              />
+            </label>
+          </div>
         </div>
 
         <div className="form-group">
