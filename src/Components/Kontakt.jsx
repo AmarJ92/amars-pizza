@@ -22,13 +22,13 @@ const initialFormState = {
   servings: '6 Slices',
   powerAvailable: true,
   tableAvailable: true,
-  fridgeAvailable: false,
+  fridgeAvailable: true,
   parkingAvailable: true,
-  outdoor: false,
+  outdoor: true,
   tentIfRain: '',
   sinkAvailable: true,
-  platesProvided: false,
-  contentConsent: false,
+  platesProvided: true,
+  contentConsent: true,
   paymentMethod: 'Rechnung'
 };
 
