@@ -9,7 +9,7 @@ const Pizzakarte = () => {
         <p className="photo-credit">Photo made by: <a href="https://www.instagram.com/nico.leissner/" target="_blank" rel="noopener noreferrer">@nico.leissner</a></p>
       </div>
       <div className="about-section-text-container">
-        <p className="primary-subheading">Pizzakarte</p>
+        <p className="primary-subheading">Die üblichen Verdächtigen 🍕</p>
         <ol>
           <li>
             <h2 className="primary-heading">Marinara</h2>
