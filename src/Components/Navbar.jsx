@@ -13,6 +13,7 @@ const Navbar = () => {
         <li><a href="#preise">Preise</a></li>
         <li><a href="#buchung">Buchung</a></li>
         <li><a href="#sonstiges">Sonstiges</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>

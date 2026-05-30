@@ -167,6 +167,27 @@ html {
   background-color: var(--accent);
 }
 
+.faq-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background-color: var(--accent);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+  margin: 0;
+}
+
 .about-section-image-container {
   flex: 0.45;
 }
