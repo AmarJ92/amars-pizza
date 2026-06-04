@@ -6,11 +6,14 @@ const initialFormState = {
   email: '',
   phone: '',
   eventDate: '',
-  time: '',
+  timeWindowStart: '',
+  timeWindowEnd: '',
   location: '',
+  guestCount: '',
   pizzaQuantity: '',
   eventType: '',
   additionalInfo: '',
+  allergies: '',
   offerWanted: false,
   marinara: '',
   margherita: '',
@@ -42,7 +45,7 @@ function yesNo(value) {
 }
 
 function buildEmailMessage(data) {
-  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nUhrzeit: ${data.time || '-'}\nOrt/Stadt: ${data.location || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
+  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nGewünschtes Zeitfenster: ${data.timeWindowStart || '-'} - ${data.timeWindowEnd || '-'}\nAnzahl Gäste: ${data.guestCount || '-'}\nOrt/Stadt: ${data.location || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
     `Marinara: ${data.marinara || '0'}\n` +
     `Margherita: ${data.margherita || '0'}\n` +
     `Salami: ${data.salami || '0'}\n` +
@@ -51,6 +54,7 @@ function buildEmailMessage(data) {
     `Veggie: ${data.veggie || '0'}\n` +
     `Nutella: ${data.nutella || '0'}\n\n` +
     `Ausgabe: ${data.servings || '-'}\n` +
+    `Allergien/Unverträglichkeiten: ${data.allergies || 'Keine angegeben'}\n` +
     `Steckdose (230V): ${yesNo(data.powerAvailable)}\n` +
     `Tisch/Küchenzeile: ${yesNo(data.tableAvailable)}\n` +
     `Kühlschrank: ${yesNo(data.fridgeAvailable)}\n` +
@@ -141,7 +145,9 @@ const Kontakt = () => {
       email: formData.email,
       phone: formData.phone,
       event_date: formData.eventDate,
-      time: formData.time,
+      time_window_start: formData.timeWindowStart,
+      time_window_end: formData.timeWindowEnd,
+      guest_count: formData.guestCount,
       location: formData.location,
       payment_method: formData.paymentMethod,
       pizza_quantity: formData.pizzaQuantity,
@@ -153,6 +159,7 @@ const Kontakt = () => {
       veggie: formData.veggie || '0',
       nutella: formData.nutella || '0',
       servings: formData.servings,
+      allergies: formData.allergies || 'Keine angegeben',
       power_available: yesNo(formData.powerAvailable),
       table_available: yesNo(formData.tableAvailable),
       fridge_available: yesNo(formData.fridgeAvailable),
@@ -263,14 +270,42 @@ const Kontakt = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="time">* Uhrzeit</label>
+          <label htmlFor="timeWindowStart">* Gewünschtes Zeitfenster - Von</label>
           <input
             type="time"
-            id="time"
-            name="time"
-            value={formData.time}
+            id="timeWindowStart"
+            name="timeWindowStart"
+            value={formData.timeWindowStart}
             onChange={handleChange}
             required
+            disabled={loading}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="timeWindowEnd">* Gewünschtes Zeitfenster - Bis</label>
+          <input
+            type="time"
+            id="timeWindowEnd"
+            name="timeWindowEnd"
+            value={formData.timeWindowEnd}
+            onChange={handleChange}
+            required
+            disabled={loading}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="guestCount">* Anzahl der Gäste</label>
+          <input
+            type="number"
+            id="guestCount"
+            name="guestCount"
+            value={formData.guestCount}
+            onChange={handleChange}
+            required
+            min="1"
+            placeholder="z.B. 25"
             disabled={loading}
           />
         </div>
@@ -436,6 +471,19 @@ const Kontakt = () => {
             <option value="8 Slices">8 Slices</option>
             <option value="Ganz">Ganz</option>
           </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="allergies">Allergien / Unverträglichkeiten (optional)</label>
+          <textarea
+            id="allergies"
+            name="allergies"
+            value={formData.allergies}
+            onChange={handleChange}
+            placeholder="z.B. Glutenunverträglichkeit, Nussallergie, etc."
+            rows="3"
+            disabled={loading}
+          />
         </div>
 
         <div className="form-group">
