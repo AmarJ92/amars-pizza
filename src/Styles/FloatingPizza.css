@@ -1,0 +1,86 @@
+/* Floating Pizza Container */
+.floating-pizza {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 500;
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.pizza-emoji {
+  animation: bounce 2s ease-in-out infinite, wiggle 3s ease-in-out infinite;
+  display: inline-block;
+  position: relative;
+}
+
+.pizza-sparkles {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 40px;
+  animation: sparkle 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-pizza {
+    right: 15px;
+    bottom: 40px;
+    font-size: 60px;
+  }
+  
+  .pizza-sparkles {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-pizza {
+    right: 10px;
+    bottom: 30px;
+    font-size: 50px;
+  }
+  
+  .pizza-sparkles {
+    font-size: 25px;
+  }
+}

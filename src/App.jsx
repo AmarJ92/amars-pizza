@@ -8,11 +8,13 @@ import Sonstiges from './Components/Sonstiges';
 import FAQ from './Components/FAQ';
 import Kontakt from './Components/Kontakt';
 import Footer from './Components/Footer';
+import FloatingPizza from './Components/FloatingPizza';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <FloatingPizza />
       <Navbar />
       <Willkommen />
       <Pizzakarte />
