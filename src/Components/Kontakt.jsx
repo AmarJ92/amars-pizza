@@ -474,7 +474,7 @@ const Kontakt = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="allergies">Allergien / Unverträglichkeiten (optional)</label>
+          <label htmlFor="allergies">Allergien / Unverträglichkeiten</label>
           <textarea
             id="allergies"
             name="allergies"
