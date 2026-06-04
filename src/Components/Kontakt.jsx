@@ -194,7 +194,7 @@ const Kontakt = () => {
 
   return (
     <div id="kontakt" className="contact-form-wrapper">
-      <h1 className="primary-heading">Sende mir eine Anfrage!</h1>
+      <h1 className="primary-heading">Anfrage-Formular</h1>
       <p className="primary-text" style={{ textAlign: 'center', marginBottom: '2rem' }}>
         Fülle das Formular aus und ich werde mich so schnell wie möglich bei dir melden.
       </p>

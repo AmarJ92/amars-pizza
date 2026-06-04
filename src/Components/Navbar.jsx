@@ -14,7 +14,7 @@ const Navbar = () => {
         <li><a href="#buchung">Buchung</a></li>
         <li><a href="#sonstiges">Sonstiges</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#kontakt">Anfrage-Formular</a></li>
       </ul>
     </nav>
   );
