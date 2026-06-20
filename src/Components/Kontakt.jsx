@@ -60,7 +60,7 @@ function buildEmailMessage(data) {
     `Kühlschrank: ${yesNo(data.fridgeAvailable)}\n` +
     `Parkmöglichkeiten: ${yesNo(data.parkingAvailable)}\n` +
     `Event draußen: ${yesNo(data.outdoor)}\n` +
-    `Zelt bei Regen: ${data.tentIfRain || 'Nicht angegeben'}\n` +
+    `Überdacht bei Regen: ${data.tentIfRain || 'Nicht angegeben'}\n` +
     `Waschbecken: ${yesNo(data.sinkAvailable)}\n` +
     `Teller gestellt: ${yesNo(data.platesProvided)}\n` +
     `Content für Instagram erlaubt: ${yesNo(data.contentConsent)}\n` +
@@ -558,14 +558,14 @@ const Kontakt = () => {
 
         {formData.outdoor && (
           <div className="form-group">
-            <label htmlFor="tentIfRain">Gibt es bei Regen ein Zelt?</label>
+            <label htmlFor="tentIfRain">Überdacht bei Regen?</label>
             <input
               type="text"
               id="tentIfRain"
               name="tentIfRain"
               value={formData.tentIfRain}
               onChange={handleChange}
-              placeholder="z.B. Partyzelt vorhanden"
+              placeholder="z.B. Zelt, Garage, Carport, überdachte Terrasse"
               disabled={loading}
             />
           </div>
