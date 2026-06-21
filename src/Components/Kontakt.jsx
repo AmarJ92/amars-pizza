@@ -216,144 +216,154 @@ const Kontakt = () => {
       )}
 
       <form className="form-container" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">* Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            placeholder="Dein Name"
-            disabled={loading}
-          />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="name">* Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              placeholder="Dein Name"
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">* Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="deine@email.com"
+              disabled={loading}
+            />
+          </div>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="email">* Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            placeholder="deine@email.com"
-            disabled={loading}
-          />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="phone">* Telefon</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              placeholder="+49 123 456789"
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="eventDate">* Veranstaltungsdatum</label>
+            <input
+              type="date"
+              id="eventDate"
+              name="eventDate"
+              value={formData.eventDate}
+              onChange={handleChange}
+              required
+              disabled={loading}
+            />
+          </div>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="phone">* Telefon</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            placeholder="+49 123 456789"
-            disabled={loading}
-          />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="timeWindowStart">* Gewünschtes Zeitfenster - Von</label>
+            <input
+              type="time"
+              id="timeWindowStart"
+              name="timeWindowStart"
+              value={formData.timeWindowStart}
+              onChange={handleChange}
+              required
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="timeWindowEnd">* Gewünschtes Zeitfenster - Bis</label>
+            <input
+              type="time"
+              id="timeWindowEnd"
+              name="timeWindowEnd"
+              value={formData.timeWindowEnd}
+              onChange={handleChange}
+              required
+              disabled={loading}
+            />
+          </div>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="eventDate">* Veranstaltungsdatum</label>
-          <input
-            type="date"
-            id="eventDate"
-            name="eventDate"
-            value={formData.eventDate}
-            onChange={handleChange}
-            required
-            disabled={loading}
-          />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="location">* Ort/Stadt (Rhein-Main Gebiet)</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              required
+              placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="postalCode">* Postleitzahl</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              value={formData.postalCode}
+              onChange={handleChange}
+              required
+              placeholder="z.B. 60311"
+              disabled={loading}
+            />
+          </div>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="timeWindowStart">* Gewünschtes Zeitfenster - Von</label>
-          <input
-            type="time"
-            id="timeWindowStart"
-            name="timeWindowStart"
-            value={formData.timeWindowStart}
-            onChange={handleChange}
-            required
-            disabled={loading}
-          />
-        </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="guestCount">* Anzahl der Gäste</label>
+            <input
+              type="number"
+              id="guestCount"
+              name="guestCount"
+              value={formData.guestCount}
+              onChange={handleChange}
+              required
+              min="1"
+              placeholder="z.B. 25"
+              disabled={loading}
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="timeWindowEnd">* Gewünschtes Zeitfenster - Bis</label>
-          <input
-            type="time"
-            id="timeWindowEnd"
-            name="timeWindowEnd"
-            value={formData.timeWindowEnd}
-            onChange={handleChange}
-            required
-            disabled={loading}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="guestCount">* Anzahl der Gäste</label>
-          <input
-            type="number"
-            id="guestCount"
-            name="guestCount"
-            value={formData.guestCount}
-            onChange={handleChange}
-            required
-            min="1"
-            placeholder="z.B. 25"
-            disabled={loading}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="location">* Ort/Stadt (Rhein-Main Gebiet)</label>
-          <input
-            type="text"
-            id="location"
-            name="location"
-            value={formData.location}
-            onChange={handleChange}
-            required
-            placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
-            disabled={loading}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="postalCode">* Postleitzahl</label>
-          <input
-            type="text"
-            id="postalCode"
-            name="postalCode"
-            value={formData.postalCode}
-            onChange={handleChange}
-            required
-            placeholder="z.B. 60311"
-            disabled={loading}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="paymentMethod">* Zahlungsart</label>
-          <select
-            id="paymentMethod"
-            name="paymentMethod"
-            value={formData.paymentMethod}
-            onChange={handleChange}
-            disabled={loading}
-          >
-            <option value="Rechnung">Rechnung</option>
-            <option value="Bar">Bar</option>
-            <option value="PayPal">PayPal</option>
-            <option value="Andere">Andere</option>
-          </select>
+          <div className="form-group">
+            <label htmlFor="paymentMethod">* Zahlungsart</label>
+            <select
+              id="paymentMethod"
+              name="paymentMethod"
+              value={formData.paymentMethod}
+              onChange={handleChange}
+              disabled={loading}
+            >
+              <option value="Rechnung">Rechnung</option>
+              <option value="Bar">Bar</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Andere">Andere</option>
+            </select>
+          </div>
         </div>
 
         <div className="form-group">
