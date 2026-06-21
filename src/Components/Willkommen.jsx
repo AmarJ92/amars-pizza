@@ -26,7 +26,7 @@ const Willkommen = () => {
               Was einst nur ein Traum war, wurde zur Realität: Heute teile ich meine Begeisterung für neapolitanische Pizza auf Events in ganz Frankfurt und Umgebung.
               <br />
               <br />
-              Mit meinem mobilen Pizzaofen bringe ich echtes Streetfood-Feeling direkt zu euch – live gebacken, frisch belegt und ein echter Hingucker auf jeder Feier.
+              Mit meinem mobilen Pizzaofen bringe ich den Geschmack Neapels direkt zu euch – frisch belegt, live gebacken und ein Highlight auf jeder Feier.
               <br />
               <br />
               Lass uns gemeinsam ein Event schaffen, das in Erinnerung bleibt – mit knusprigem Rand, geschmolzenem Käse und ganz viel Amore.
