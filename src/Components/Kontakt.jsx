@@ -468,7 +468,6 @@ const Kontakt = () => {
             disabled={loading}
           >
             <option value="6 Slices">6 Slices</option>
-            <option value="8 Slices">8 Slices</option>
             <option value="Ganz">Ganz</option>
           </select>
         </div>
