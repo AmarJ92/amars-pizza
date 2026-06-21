@@ -467,6 +467,7 @@ const Kontakt = () => {
             onChange={handleChange}
             disabled={loading}
           >
+            <option value="4 Slices">4 Slices</option>
             <option value="6 Slices">6 Slices</option>
             <option value="Ganz">Ganz</option>
           </select>
