@@ -361,6 +361,10 @@ html {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
 }
 
+.form-group--offer {
+  margin-bottom: 2rem;
+}
+
 .form-group label {
   display: block;
   margin-bottom: 0.6rem;

@@ -305,20 +305,6 @@ const Kontakt = () => {
 
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="location">* Ort/Stadt (Rhein-Main Gebiet)</label>
-            <input
-              type="text"
-              id="location"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-              required
-              placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
-              disabled={loading}
-            />
-          </div>
-
-          <div className="form-group">
             <label htmlFor="postalCode">* Postleitzahl</label>
             <input
               type="text"
@@ -328,6 +314,20 @@ const Kontakt = () => {
               onChange={handleChange}
               required
               placeholder="z.B. 60311"
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="location">* Ort/Stadt</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              required
+              placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
               disabled={loading}
             />
           </div>
@@ -652,17 +652,19 @@ const Kontakt = () => {
           />
         </div>
 
-        <div className="checkbox-group">
-          <label>
-            <input
-              type="checkbox"
-              name="offerWanted"
-              checked={formData.offerWanted}
-              onChange={handleChange}
-              disabled={loading}
-            />
-            Ich möchte ein formales Angebot erhalten
-          </label>
+        <div className="form-group form-group--offer">
+          <div className="checkbox-group">
+            <label>
+              <input
+                type="checkbox"
+                name="offerWanted"
+                checked={formData.offerWanted}
+                onChange={handleChange}
+                disabled={loading}
+              />
+              Ich möchte ein formales Angebot erhalten
+            </label>
+          </div>
         </div>
 
         <button type="submit" className="form-button" disabled={loading}>
