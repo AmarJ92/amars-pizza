@@ -9,6 +9,7 @@ const initialFormState = {
   timeWindowStart: '',
   timeWindowEnd: '',
   location: '',
+  postalCode: '',
   guestCount: '',
   pizzaQuantity: '',
   eventType: '',
@@ -45,7 +46,7 @@ function yesNo(value) {
 }
 
 function buildEmailMessage(data) {
-  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nGewünschtes Zeitfenster: ${data.timeWindowStart || '-'} - ${data.timeWindowEnd || '-'}\nAnzahl Gäste: ${data.guestCount || '-'}\nOrt/Stadt: ${data.location || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
+  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nGewünschtes Zeitfenster: ${data.timeWindowStart || '-'} - ${data.timeWindowEnd || '-'}\nAnzahl Gäste: ${data.guestCount || '-'}\nOrt/Stadt: ${data.location || '-'}\nPostleitzahl: ${data.postalCode || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
     `Marinara: ${data.marinara || '0'}\n` +
     `Margherita: ${data.margherita || '0'}\n` +
     `Salami: ${data.salami || '0'}\n` +
@@ -149,6 +150,7 @@ const Kontakt = () => {
       time_window_end: formData.timeWindowEnd,
       guest_count: formData.guestCount,
       location: formData.location,
+      postal_code: formData.postalCode,
       payment_method: formData.paymentMethod,
       pizza_quantity: formData.pizzaQuantity,
       marinara: formData.marinara || '0',
@@ -320,6 +322,20 @@ const Kontakt = () => {
             onChange={handleChange}
             required
             placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
+            disabled={loading}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="postalCode">* Postleitzahl</label>
+          <input
+            type="text"
+            id="postalCode"
+            name="postalCode"
+            value={formData.postalCode}
+            onChange={handleChange}
+            required
+            placeholder="z.B. 60311"
             disabled={loading}
           />
         </div>
