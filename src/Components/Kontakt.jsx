@@ -10,6 +10,8 @@ const initialFormState = {
   timeWindowEnd: '',
   location: '',
   postalCode: '',
+  street: '',
+  houseNumber: '',
   guestCount: '',
   pizzaQuantity: '',
   eventType: '',
@@ -46,7 +48,7 @@ function yesNo(value) {
 }
 
 function buildEmailMessage(data) {
-  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nGewünschtes Zeitfenster: ${data.timeWindowStart || '-'} - ${data.timeWindowEnd || '-'}\nAnzahl Gäste: ${data.guestCount || '-'}\nOrt/Stadt: ${data.location || '-'}\nPostleitzahl: ${data.postalCode || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
+  return `Neue Catering-Anfrage\n\nName: ${data.name || '-'}\nEmail: ${data.email || '-'}\nTelefon: ${data.phone || '-'}\nDatum: ${data.eventDate || '-'}\nGewünschtes Zeitfenster: ${data.timeWindowStart || '-'} - ${data.timeWindowEnd || '-'}\nAnzahl Gäste: ${data.guestCount || '-'}\nOrt/Stadt: ${data.location || '-'}\nPostleitzahl: ${data.postalCode || '-'}\nStraße: ${data.street || '-'}\nHausnummer: ${data.houseNumber || '-'}\nZahlungsart: ${data.paymentMethod || '-'}\n\nGesamtanzahl Pizzen: ${data.pizzaQuantity || '-'}\n` +
     `Marinara: ${data.marinara || '0'}\n` +
     `Margherita: ${data.margherita || '0'}\n` +
     `Salami: ${data.salami || '0'}\n` +
@@ -151,6 +153,8 @@ const Kontakt = () => {
       guest_count: formData.guestCount,
       location: formData.location,
       postal_code: formData.postalCode,
+      street: formData.street,
+      house_number: formData.houseNumber,
       payment_method: formData.paymentMethod,
       pizza_quantity: formData.pizzaQuantity,
       marinara: formData.marinara || '0',
@@ -328,6 +332,34 @@ const Kontakt = () => {
               onChange={handleChange}
               required
               placeholder="z.B. Frankfurt, Mainz, Wiesbaden"
+              disabled={loading}
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="street">Straße</label>
+            <input
+              type="text"
+              id="street"
+              name="street"
+              value={formData.street}
+              onChange={handleChange}
+              placeholder="z.B. Musterstraße"
+              disabled={loading}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="houseNumber">Hausnummer</label>
+            <input
+              type="text"
+              id="houseNumber"
+              name="houseNumber"
+              value={formData.houseNumber}
+              onChange={handleChange}
+              placeholder="z.B. 12a"
               disabled={loading}
             />
           </div>
