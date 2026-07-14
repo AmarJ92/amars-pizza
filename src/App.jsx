@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
+import CookieConsent from './Components/CookieConsent';
 import Willkommen from './Components/Willkommen';
 import Pizzakarte from './Components/Pizzakarte';
 import Preise from './Components/Preise';
@@ -14,6 +15,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <CookieConsent />
       <FloatingPizza />
       <Navbar />
       <Willkommen />
