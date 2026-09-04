@@ -1,26 +1,40 @@
 import React from 'react'
 
+const eventTypes = [
+  { title: 'Geburtstage', icon: '🎂' },
+  { title: 'Hochzeiten', icon: '💍' },
+  { title: 'Firmenfeiern', icon: '🤝' },
+  { title: 'Kita- & Schulfeste', icon: '🎈' },
+  { title: 'Sommerfeste', icon: '☀️' },
+  { title: 'Festivals & Märkte', icon: '🎪' },
+  { title: 'Private Gartenpartys', icon: '🌿' },
+  { title: 'Einfach, weil Pizza passt', icon: '🍕' },
+]
+
 const Willkommen = () => {
   return (
     <div id="willkommen" className="home-container">
       <div className="home-banner-container">
-        <div className="home-text-section" style={{ flex: 1 }}>
+        <div className="home-text-section">
           <h1 className="primary-heading">
             Buche dein Pizza-Catering – für jeden Anlass, der nach Genuss ruft!
           </h1>
-          <div className="primary-text">
-            <ul>
-              <li>Geburtstage</li>
-              <li>Hochzeiten</li>
-              <li>Firmenfeiern</li>
-              <li>Kita- und Schulfeste</li>
-              <li>Sommerfeste</li>
-              <li>Festivals & Märkte</li>
-              <li>Private Gartenpartys</li>
-              <li>... oder einfach, weil Pizza immer passt!</li>
-            </ul>
+          <div className="event-intro">
+            <p className="primary-subheading">Pizza-Momente für jede Feier</p>
+            <div className="event-card-grid">
+              {eventTypes.map((event) => (
+                <article className="event-card" key={event.title}>
+                  <div className="event-card-overlay">
+                    <span className="event-card-icon" aria-hidden="true">{event.icon}</span>
+                    <h2>{event.title}</h2>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="primary-text welcome-copy">
             <p>
-              Hey! Ich bin Amar und freue mich riesig, dass du hier bist.
+              <strong>Hey! Ich bin Amar und freue mich riesig, dass du hier bist.</strong>
               <br />
               Alles begann mit dem Wunsch nach einer richtig guten italienischen Pizza – selbst gemacht, mit Herz und Leidenschaft.
               Was einst nur ein Traum war, wurde zur Realität: Heute teile ich meine Begeisterung für neapolitanische Pizza auf Events in ganz Frankfurt und Umgebung.

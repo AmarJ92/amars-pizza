@@ -67,16 +67,13 @@ html {
 }
 
 .home-banner-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 2rem 5%;
+  padding: 3.5rem 5% 4.5rem;
   background: linear-gradient(135deg, var(--color-white) 0%, #f5f5f5 100%);
 }
 
 .home-text-section {
-  flex: 1;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .home-text-section h1 {
@@ -84,6 +81,7 @@ html {
   color: var(--primary);
   margin-bottom: 1rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .primary-heading {
@@ -116,6 +114,89 @@ html {
 .home-text-section ul p {
   margin-bottom: 0.5rem;
   color: #666;
+}
+
+.event-intro {
+  margin: 2rem 0 2.5rem;
+}
+
+.event-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.event-card {
+  position: relative;
+  min-height: 175px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fffdf8 0%, #f4e8d1 100%);
+  border: 1px solid rgba(206, 43, 55, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.event-card::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(0, 146, 70, 0.14), transparent 34%), radial-gradient(circle at 12% 88%, rgba(206, 43, 55, 0.12), transparent 32%);
+  content: '';
+}
+
+.event-card-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  min-height: 175px;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.event-card:hover .event-card-overlay {
+  transform: translateY(-4px);
+}
+
+.event-card-icon {
+  display: grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-bottom: 0.8rem;
+  place-items: center;
+  border: 2px solid rgba(206, 43, 55, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 6px 14px rgba(95, 58, 28, 0.1);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.event-card h2 {
+  color: var(--primary);
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.welcome-copy {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.welcome-copy strong {
+  color: var(--primary);
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 1.45rem;
+  line-height: 1.35;
 }
 
 .home-bannerImage-container {
@@ -555,13 +636,22 @@ html {
   }
 
   .home-banner-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 5%;
+    padding: 2.5rem 5% 3rem;
   }
 
   .home-text-section h1 {
     font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .event-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .event-card,
+  .event-card-overlay {
+    min-height: 145px;
   }
 
   .about-section-container {
